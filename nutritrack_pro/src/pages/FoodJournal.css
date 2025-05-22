@@ -1,0 +1,26 @@
+.food-journal-page {
+  padding: 1rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-title {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  color: var(--kavia-dark);
+}
+
+.page-description {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.content-placeholder {
+  background-color: white;
+  border-radius: 12px;
+  padding: 3rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  color: var(--text-secondary);
+}
