@@ -1,0 +1,191 @@
+.dashboard-page {
+  padding: 1rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-title {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  color: var(--kavia-dark);
+}
+
+.page-description {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.dashboard-sections {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 992px) {
+  .dashboard-sections {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.dashboard-section {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.section-title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--kavia-dark);
+}
+
+/* Meal section styles */
+.meals-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.meal-card {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.meal-header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(232, 122, 65, 0.1);
+}
+
+.meal-title {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--kavia-orange);
+}
+
+.meal-time {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.meal-foods {
+  list-style: none;
+  padding: 0.75rem 1rem;
+}
+
+.food-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.food-item:last-child {
+  border-bottom: none;
+}
+
+.food-name {
+  font-size: 0.9rem;
+}
+
+.food-calories {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.meal-footer {
+  padding: 0.75rem 1rem;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+.add-food-btn {
+  background: transparent;
+  border: none;
+  color: var(--kavia-orange);
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.add-food-btn:hover {
+  background-color: rgba(232, 122, 65, 0.1);
+}
+
+/* Progress chart styles */
+.progress-card {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.progress-chart {
+  display: flex;
+  height: 200px;
+  align-items: flex-end;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.chart-day {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chart-column-container {
+  width: 100%;
+  height: 170px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.chart-column {
+  width: 70%;
+  background-color: #ddd;
+  border-radius: 4px 4px 0 0;
+}
+
+.chart-column.goal-met {
+  background-color: var(--kavia-orange);
+}
+
+.chart-label {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.progress-legend {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  margin-right: 0.5rem;
+  background-color: #ddd;
+  border-radius: 2px;
+}
+
+.legend-color.goal-met {
+  background-color: var(--kavia-orange);
+}
