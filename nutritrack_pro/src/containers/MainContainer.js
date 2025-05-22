@@ -4,6 +4,8 @@ import './MainContainer.css';
 
 // Import pages
 import Dashboard from '../pages/Dashboard';
+import MealTracker from '../pages/MealTracker';
+import FoodJournal from '../pages/FoodJournal';
 
 /**
  * MainContainer - Primary container component for NutriTrack Pro
