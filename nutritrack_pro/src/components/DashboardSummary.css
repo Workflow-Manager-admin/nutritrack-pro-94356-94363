@@ -1,0 +1,220 @@
+.dashboard-summary {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.summary-heading {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+  color: var(--kavia-dark);
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.summary-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.25rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.card-title {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Calorie display styles */
+.calorie-display {
+  text-align: center;
+}
+
+.calorie-progress-container {
+  height: 24px;
+  background-color: #f0f0f0;
+  border-radius: 12px;
+  position: relative;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+}
+
+.calorie-progress {
+  height: 100%;
+  background-color: var(--kavia-orange);
+  border-radius: 12px;
+}
+
+.calorie-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.calorie-remaining {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Macronutrient styles */
+.macro-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.macro-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.macro-heading {
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.macro-heading.protein {
+  color: #3498db;
+}
+
+.macro-heading.carbs {
+  color: #2ecc71;
+}
+
+.macro-heading.fats {
+  color: #e74c3c;
+}
+
+.macro-value {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.macro-bar {
+  height: 8px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.25rem;
+}
+
+.macro-progress {
+  height: 100%;
+  border-radius: 4px;
+}
+
+.macro-progress.protein {
+  background-color: #3498db;
+}
+
+.macro-progress.carbs {
+  background-color: #2ecc71;
+}
+
+.macro-progress.fats {
+  background-color: #e74c3c;
+}
+
+.macro-target {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+/* Water intake styles */
+.water-container {
+  text-align: center;
+}
+
+.water-glasses {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.water-glass {
+  font-size: 1.5rem;
+  opacity: 0.3;
+  transition: opacity 0.2s;
+}
+
+.water-glass.filled {
+  opacity: 1;
+}
+
+.water-count {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Insights styles */
+.insights-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.insight-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.insight-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.insight-icon.good {
+  background-color: rgba(46, 204, 113, 0.2);
+  color: #2ecc71;
+}
+
+.insight-icon.warning {
+  background-color: rgba(241, 196, 15, 0.2);
+  color: #f39c12;
+}
+
+.insight-icon.bad {
+  background-color: rgba(231, 76, 60, 0.2);
+  color: #e74c3c;
+}
+
+.insight-text {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .dashboard-summary {
+    padding: 1rem;
+  }
+}
