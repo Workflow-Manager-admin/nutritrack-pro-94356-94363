@@ -45,15 +45,24 @@ const MainContainer = () => {
         <aside className={`nutritrack-sidebar ${sidebarOpen ? 'open' : 'closed'}`}>
           <nav className="sidebar-nav">
             <ul className="nav-list">
-              <li className="nav-item active">
+              <li 
+                className="nav-item active"
+                onClick={() => window.location.href = '/dashboard'}
+              >
                 <span className="nav-icon">📊</span>
                 <span className="nav-text">Dashboard</span>
               </li>
-              <li className="nav-item">
+              <li 
+                className="nav-item"
+                onClick={() => window.location.href = '/meal-tracker'}
+              >
                 <span className="nav-icon">🍽️</span>
                 <span className="nav-text">Meal Tracker</span>
               </li>
-              <li className="nav-item">
+              <li 
+                className="nav-item"
+                onClick={() => window.location.href = '/food-journal'}
+              >
                 <span className="nav-icon">📝</span>
                 <span className="nav-text">Food Journal</span>
               </li>
