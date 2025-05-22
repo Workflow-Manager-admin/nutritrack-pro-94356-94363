@@ -101,6 +101,8 @@ const MainContainer = () => {
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/meal-tracker" element={<MealTracker />} />
+            <Route path="/food-journal" element={<FoodJournal />} />
             {/* Additional routes will be added here as we develop more pages */}
             <Route path="*" element={<Dashboard />} />
           </Routes>
