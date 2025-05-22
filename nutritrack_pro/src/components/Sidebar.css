@@ -1,0 +1,129 @@
+.sidebar {
+  width: 250px;
+  background-color: white;
+  height: calc(100vh - 60px);
+  position: fixed;
+  top: 60px;
+  left: -250px;
+  transition: transform 0.3s ease;
+  z-index: 900;
+  border-right: 1px solid rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.sidebar.open {
+  transform: translateX(250px);
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.sidebar-nav {
+  padding: 1rem 0;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.nav-item:hover {
+  background-color: rgba(232, 122, 65, 0.1);
+}
+
+.nav-item.active {
+  background-color: rgba(232, 122, 65, 0.15);
+  border-left: 3px solid var(--kavia-orange);
+}
+
+.nav-icon {
+  margin-right: 0.75rem;
+  font-size: 1.2rem;
+  width: 1.5rem;
+  text-align: center;
+}
+
+.nav-text {
+  font-size: 0.95rem;
+}
+
+.nutrition-summary {
+  margin-top: auto;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.summary-title {
+  font-size: 1rem;
+  margin: 0 0 1rem 0;
+  color: #555;
+}
+
+.summary-item {
+  margin-bottom: 0.75rem;
+}
+
+.summary-label {
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.summary-bar {
+  height: 8px;
+  background-color: rgba(0,0,0,0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.25rem;
+}
+
+.summary-progress {
+  height: 100%;
+  background-color: var(--kavia-orange);
+  border-radius: 4px;
+}
+
+.summary-progress.protein {
+  background-color: #3498db;
+}
+
+.summary-progress.carbs {
+  background-color: #2ecc71;
+}
+
+.summary-progress.fat {
+  background-color: #e74c3c;
+}
+
+.summary-value {
+  font-size: 0.8rem;
+  color: #666;
+  text-align: right;
+}
+
+@media (min-width: 769px) {
+  .sidebar {
+    left: 0;
+    transform: translateX(0);
+  }
+  
+  .sidebar:not(.open) {
+    transform: translateX(-250px);
+  }
+}
