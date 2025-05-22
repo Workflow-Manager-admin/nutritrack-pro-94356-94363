@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
-import { Outlet } from 'react-router-dom';
+import { Routes, Route, Outlet } from 'react-router-dom';
 import './MainContainer.css';
+
+// Import pages
+import Dashboard from '../pages/Dashboard';
 
 /**
  * MainContainer - Primary container component for NutriTrack Pro
